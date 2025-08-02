@@ -101,7 +101,7 @@ for more information.
 Rate-limiting and authentication are another key aspects to help protect
 against DOS attacks. Validators are supposed to use external tools like
 [NGINX](https://www.nginx.com/blog/rate-limiting-nginx/) or
-[traefik](https://docs.traefik.io/middlewares/ratelimit/)
+[traefik](https://doc.traefik.io/traefik/middlewares/http/ratelimit/)
 to achieve the same things.
 
 ## Debugging Tendermint
@@ -332,13 +332,13 @@ We want `skip_timeout_commit=false` when there is economics on the line
 because proposers should wait to hear for more votes. But if you don't
 care about that and want the fastest consensus, you can skip it. It will
 be kept false by default for public deployments (e.g. [Cosmos
-Hub](https://cosmos.network/intro/hub)) while for enterprise
+Hub](https://forum.cosmos.network/)) while for enterprise
 applications, setting it to true is not a problem.
 
 - `consensus.peer_gossip_sleep_duration`
 
 You can try to reduce the time your node sleeps before checking if
-theres something to send its peers.
+there's something to send its peers.
 
 - `consensus.timeout_commit`
 
